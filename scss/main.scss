@@ -1,0 +1,129 @@
+$primary-color: #89e1c9;
+$secondary-color: #98d4c4;
+$btnBorder-color: #94c3b1;
+$btnText-color: #78c3a7;
+$btnHover-color: #72E5B6;
+$font-stack: Helvetica,
+sans-serif;
+// General Styles 
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    font: 100% $font-stack;
+    background-color: #fff;
+    margin: 0;
+}
+
+// Container for Modal Control + Modal Control
+.demo-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    .modal-control {
+        padding: 1rem;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.2em;
+        border: 2px solid $btnBorder-color;
+        text-align: center;
+        border-radius: 5px;
+        background: $primary-color;
+        box-shadow: 2px 1px 1px 1px #ddd;
+        button {
+            width: 100%;
+            font: inherit;
+            background: #fff;
+            border: 2px solid $btnBorder-color;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            color: $btnText-color;
+            cursor: pointer;
+            font-weight: bold;
+            &:hover,
+            &:active {
+                border-color: $btnHover-color;
+                color: $btnHover-color;
+            }
+        }
+    }
+}
+
+// The Modal
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    top: 40%;
+    left: 40%;
+    width: 20%;
+    background: $secondary-color;
+    border: $btnBorder-color;
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    h1 {
+        color: #fff;
+        margin: 0.5rem 0;
+        font-size: 1.2rem;
+    }
+    .modal-input {
+        margin: 0.5rem 0;
+    }
+    textarea {
+        width: 100%;
+        font: inherit;
+        resize: none;
+        &:focus {
+            outline: none;
+            background: #fff;
+            border-color: $btnBorder-color;
+        }
+    }
+    .modal-actions {
+        text-align: right;
+    }
+    .btn-cancel {
+        border-color: red;
+        color: red;
+        border-radius: 5px;
+        &:hover,
+        &:active {
+            color: white;
+            background: red;
+        }
+    }
+    .btn-confirm {
+        border-color: $btnBorder-color;
+        color: $btnText-color;
+        border-radius: 5px;
+        &:hover,
+        &:active {
+            color: white;
+            background: $btnText-color;
+        }
+    }
+}
+
+.backdrop {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.open {
+    display: block;
+}
