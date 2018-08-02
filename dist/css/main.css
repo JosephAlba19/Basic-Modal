@@ -27,7 +27,7 @@ body {
     background: #89e1c9;
     box-shadow: 2px 1px 1px 1px #ddd; }
     .demo-container .modal-control button {
-      width: 100%;
+      width: 50%;
       font: inherit;
       background: #fff;
       border: 2px solid #94c3b1;
